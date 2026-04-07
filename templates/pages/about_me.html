@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}About Me{% endblock %}
 {% block nav_about %}active{% endblock %}
@@ -6,17 +7,24 @@
 {% block content %}
 <h1 class="page-title">About Me</h1>
 
-<div class="row">
-    <div class="col-md-6">
+<div class="row align-items-start">
+
+    <!-- IMAGE ON THE LEFT -->
+    <section class="col-md-4 mb-4">
+        <div class="text-center">
+            <img src="{% static 'img/img-1.jpg' %}" 
+                 class="img-fluid rounded-circle shadow"
+                 style="width: 250px; height: 250px; object-fit: cover;"
+                 alt="Profile">
+        </div>
+    </section>
+
+    <!-- TEXT ON THE RIGHT -->
+    <div class="col-md-8">
         <p class="lead">
-            Hi, I'm Luis — a developer passionate about clean UI, Django, and modern web design.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias maxime, dolor officiis sit deleniti quae accusamus nesciunt iusto! Fugit quaerat asperiores officiis, nam sequi soluta illo similique corrupti, quibusdam, reiciendis neque id debitis saepe alias nulla excepturi totam dolor praesentium temporibus? Iusto recusandae reprehenderit molestiae odio nam alias repellat quisquam voluptate. In dolorem fugiat et ipsam eaque atque nam magnam exercitationem, ut natus officiis voluptatibus repellendus commodi a, sint, nemo quis cupiditate! Ad ex necessitatibus aspernatur cupiditate incidunt porro ut voluptatum fuga dolor eveniet culpa laboriosam, ullam et sapiente recusandae ipsam. Iure eos unde excepturi rem asperiores delectus corporis, dolorum quisquam praesentium fugiat voluptate alias ab dicta reprehenderit repudiandae odio blanditiis veritatis a laudantium dolores, hic pariatur quis consequatur maiores? Ipsum voluptatem aliquam at id, nemo fugiat quas magni quisquam commodi assumenda rem porro temporibus ducimus voluptate obcaecati nihil, iure harum. Eos veritatis debitis nisi consectetur neque eius? Consectetur hic delectus aut aspernatur quaerat temporibus animi excepturi rem libero! Iusto illum distinctio ab, sequi animi odit similique ullam sint, officia modi unde suscipit assumenda. Nam ad nostrum, iste iusto aspernatur aut autem aliquid earum cupiditate soluta asperiores veritatis officiis cum, unde delectus reiciendis, eveniet facilis consequatur quam quae voluptatem! Quia ullam praesentium, dolore voluptatibus porro blanditiis mollitia magnam necessitatibus nobis consectetur fugiat adipisci asperiores ut reiciendis ex totam sapiente fugit nihil sint pariatur ad fuga culpa. Ipsa facere placeat earum ipsum dolores expedita optio sint possimus quos culpa in, alias saepe doloribus inventore quasi iste nisi cumque voluptates totam quaerat nihil voluptas dignissimos neque deserunt. Mollitia possimus, modi nostrum tempora ducimus ipsum expedita eos accusantium in aperiam voluptatibus quis nesciunt suscipit accusamus laudantium minus ex odit. Vero laboriosam maxime iste qui quam, eligendi similique cupiditate eius voluptatibus id. Esse soluta reprehenderit est, nisi nulla cumque sequi odio voluptatem? Deleniti, nihil? dolor sit amet consectetur adipisicing elit. Quidem cum magnam ducimus perspiciatis laboriosam! Ut exercitationem totam placeat, itaque quidem vero possimus temporibus, voluptatum illum, quia facere rerum excepturi in quae officiis atque rem delectus...
         </p>
     </div>
 
-    <div class="col-md-6">
-        <div class="card custom-card p-3">
-            <img src="https://picsum.photos/500/300" class="rounded" alt="Profile">
-        </div>
-    </div>
 </div>
 {% endblock %}

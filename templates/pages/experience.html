@@ -1,11 +1,55 @@
 {% extends "base.html" %}
-
 {% load static %}
 
-{% block title %} Experince {% endblock %}
+{% block title %} Experience {% endblock %}
+
+{% block title %} Experience {% endblock %}
+
+{% block title %}Experience{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/experience.css' %}">
+{% endblock %}
 
 {% block content %}
- 
-<h1> This is experince page</h1>
+
+<h1>Professional Experience</h1>
+
+<div class="experience-section">
+
+    <div class="experience-item">
+        <h2>Medical Assistant</h2>
+        <p><strong>2009 – 2014</strong></p>
+        <ul>
+            <li>Assisted physicians with patient care, vitals, and clinical procedures</li>
+            <li>Managed patient records and appointment scheduling</li>
+            <li>Supported front and back office operations</li>
+            <li>Ensured compliance with medical standards and confidentiality</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h2>Warehouse Associate</h2>
+        <p><strong>2014 – 2022</strong></p>
+        <ul>
+            <li>Processed orders and maintained inventory accuracy</li>
+            <li>Operated warehouse equipment safely and efficiently</li>
+            <li>Prepared shipments and organized stock areas</li>
+            <li>Improved workflow efficiency through teamwork and organization</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h2>Business Owner – Tortilla Route</h2>
+        <p><strong>2023 – Present</strong></p>
+        <ul>
+            <li>Operate and manage a tortilla distribution route</li>
+            <li>Handle sales, customer relationships, and delivery logistics</li>
+            <li>Manage inventory, ordering, and financial tracking</li>
+            <li>Maintain strong relationships with stores and vendors</li>
+        </ul>
+    </div>
+
+</div>
 
 {% endblock %}

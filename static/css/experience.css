@@ -1,0 +1,58 @@
+/* EXPERIENCE PAGE STYLING */
+
+.experience-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.experience-item {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid #e6e6e6;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+}
+
+.experience-item h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+    color: #222;
+    font-weight: 600;
+}
+
+.experience-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.experience-item ul {
+    padding-left: 1.2rem;
+}
+
+.experience-item ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+    .experience-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .experience-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
