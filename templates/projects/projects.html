@@ -1,27 +1,35 @@
 {% extends 'base.html' %}
-{% block title %}Projects{% endblock %}
 {% load static %}
+<link rel="stylesheet" href="{% static 'css/projects.css' %}">
+
+{% block title %}Projects{% endblock %}
 
 {% block content %}
 
-<section class="projects-section center-colum">
-    <h2>Projects</h2>
+<section class="projects-section center-column">
+    <h2 class="section-title">Projects</h2>
+
     <div class="projects-list">
         {% for project in projects %}
-        <div class="project-car">
-            <a href="{{project.repository}}" target="_blank">
-                <img src="{{project.image.url}}" alt="project.name">
-                <p>{{project.name}}</p>
-                <p>{{project.description}}</p>
-                <p>{{project.year}}</p>
-                {% for skill in project.skills.all %}
-                <div class="skill-container center">
-                    <label class="text-label">{{skill.name}}</label>
+        <div class="project-card">
+            <a href="{{ project.repository }}" target="_blank">
+                <img src="{{ project.image.url }}" class="project-image" alt="{{ project.name }}">
+                
+                <div class="project-info">
+                    <p class="project-name">{{ project.name }}</p>
+                    <p class="project-description">{{ project.description }}</p>
+                    <p class="project-year">{{ project.year }}</p>
+
+                    <div class="skills-wrapper">
+                        {% for skill in project.skills.all %}
+                        <span class="skill-tag">{{ skill.name }}</span>
+                        {% endfor %}
+                    </div>
                 </div>
-                {% enfor %}
             </a>
         </div>
         {% endfor %}
     </div>
 </section>
-{% enblock %}
+
+{% endblock %}
