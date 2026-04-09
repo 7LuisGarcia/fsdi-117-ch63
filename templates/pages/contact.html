@@ -1,1 +1,45 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+<div class="contact-header">
+    <h1>Contact Me</h1>
+    <p>If you’d like to connect, collaborate, or ask a question, feel free to reach out.</p>
+</div>
+
+<div class="contact-container">
+
+    <div class="contact-info card">
+        <h2>My Information</h2>
+        <ul>
+            <li><strong>Email:</strong> garcia@example.com</li>
+            <li><strong>Phone:</strong> (932) 325‑4123</li>
+            <li><strong>Location:</strong> Los Angeles, CA</li>
+        </ul>
+    </div>
+
+    <form class="contact-form card">
+        <h2>Send a Message</h2>
+
+        <label>Name</label>
+        <input type="text" placeholder="Your name">
+
+        <label>Email</label>
+        <input type="email" placeholder="Your email">
+
+        <label>Phone</label>
+        <input type="tel" placeholder="Your phone number">
+
+        <label>Message</label>
+        <textarea placeholder="Write your message here..."></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+</div>
+
+{% endblock %}
