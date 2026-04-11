@@ -23,6 +23,8 @@
     </div>
 
     <form class="contact-form card">
+        {% csrf_token %}
+        <!-- {{form.as_p}} -->
         <h2>Send a Message</h2>
 
         <label>Name</label>
@@ -38,6 +40,7 @@
         <textarea placeholder="Write your message here..."></textarea>
 
         <button type="submit">Send Message</button>
+        <button type="reset">Cancel</button>
     </form>
 
 </div>
