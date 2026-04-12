@@ -1,4 +1,12 @@
-/* Page Header */
+/* ===== GLOBAL BACKGROUND ===== */
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2d2d44, #3a3a5c);
+    background-attachment: fixed;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== PAGE HEADER ===== */
 .contact-header {
     text-align: center;
     margin-bottom: 40px;
@@ -8,38 +16,65 @@
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 1px;
+    color: #fff;
 }
 
 .contact-header p {
-    color: #555;
     font-size: 1.1rem;
+    color: #ddd;
 }
 
-/* Layout */
+/* ===== LAYOUT ===== */
 .contact-container {
     display: flex;
     gap: 40px;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
-/* Card Style */
+/* ===== CARD STYLE (GLASS + GLOW EFFECT) ===== */
 .card {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     width: 350px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 2px;
+    background: linear-gradient(135deg, #4e8cff, #8f6fff, #ff7ce0);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
 }
 
 .card h2 {
     margin-bottom: 20px;
     font-size: 1.4rem;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 10px;
+    color: #fff;
 }
 
-/* Contact Info */
+/* ===== CONTACT INFO ===== */
 .contact-info ul {
     list-style: none;
     padding: 0;
@@ -48,13 +83,15 @@
 .contact-info li {
     margin-bottom: 12px;
     font-size: 1rem;
+    color: #eee;
 }
 
-/* Form */
+/* ===== FORM ===== */
 .contact-form label {
     display: block;
     margin-top: 15px;
     font-weight: 600;
+    color: #fff;
 }
 
 .contact-form input,
@@ -63,7 +100,9 @@
     padding: 10px;
     margin-top: 5px;
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
     font-size: 1rem;
 }
 
@@ -72,11 +111,12 @@
     resize: none;
 }
 
+/* ===== BUTTONS ===== */
 .contact-form button {
     margin-top: 20px;
     width: 100%;
     padding: 12px;
-    background: #1a73e8;
+    background: #4e8cff;
     color: white;
     border: none;
     border-radius: 8px;
@@ -86,5 +126,21 @@
 }
 
 .contact-form button:hover {
-    background: #0f5ac6;
+    background: #3a6fd6;
+}
+
+/* Success message */
+.success-message {
+    margin-top: 15px;
+    color: #90ee90;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ===== ERROR MESSAGE (ADDED) ===== */
+.error {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    margin-bottom: -5px;
 }
