@@ -22,30 +22,30 @@
         </ul>
     </div>
 
-    <!-- FIXED FORM BELOW -->
     <form class="contact-form card" method="POST">
-        {% csrf_token %}
-        <h2>Send a Message</h2>
+    {% csrf_token %}
+    <h2>Send a Message</h2>
 
-        <label>Name</label>
-        <input type="text" name="name" placeholder="Your name" required>
+    <label>Name</label>
+    <input type="text" name="name" placeholder="Your name" required>
 
-        <label>Email</label>
-        <input type="email" name="email" placeholder="Your email" required>
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Your email" required>
 
-        <label>Subject</label>
-        <input type="text" name="subject" placeholder="Subject" required>
+    <label>Subject</label>
+    <input type="text" name="subject" placeholder="Subject" required>
 
-        <label>Message</label>
-        <textarea name="message" placeholder="Write your message here..." rows="5" required></textarea>
+    <label>Message</label>
+    <textarea name="message" placeholder="Write your message here..." rows="5" required></textarea>
 
-        <button type="submit">Send Message</button>
-        <button type="reset">Cancel</button>
+    <button type="submit">Send Message</button>
+    <button type="reset">Cancel</button>
 
-        {% if success %}
-            <p class="success-message">Your message has been sent!</p>
-        {% endif %}
-    </form>
+    {% if success %}
+        <p class="success-message">Your message has been sent!</p>
+    {% endif %}
+</form>
+
 
 </div>
 

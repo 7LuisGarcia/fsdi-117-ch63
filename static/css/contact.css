@@ -1,8 +1,8 @@
 /* ===== GLOBAL BACKGROUND ===== */
 body {
-    background: linear-gradient(135deg, #1e1e2f, #2d2d44, #3a3a5c);
+    background: linear-gradient(135deg, #e4e4ea, #d6d6df, #c7c7d2);
     background-attachment: fixed;
-    color: #fff;
+    color: #333; /* Professional neutral text */
     font-family: Arial, sans-serif;
 }
 
@@ -16,12 +16,12 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #fff;
+    color: #222; /* Dark gray for clean contrast */
 }
 
 .contact-header p {
     font-size: 1.1rem;
-    color: #ddd;
+    color: #444;
 }
 
 /* ===== LAYOUT ===== */
@@ -35,14 +35,13 @@ body {
 
 /* ===== CARD STYLE (GLASS + GLOW EFFECT) ===== */
 .card {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.35); /* Brighter for light theme */
+    backdrop-filter: blur(12px);
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Softer shadow */
     width: 350px;
-
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     position: relative;
 }
 
@@ -53,14 +52,25 @@ body {
     border-radius: 12px;
     padding: 2px;
     background: linear-gradient(135deg, #4e8cff, #8f6fff, #ff7ce0);
+
+    /* Standard property */
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    /* WebKit fallback */
     -webkit-mask:
         linear-gradient(#000 0 0) content-box,
         linear-gradient(#000 0 0);
+
     -webkit-mask-composite: xor;
             mask-composite: exclude;
+
     opacity: 0;
     transition: opacity 0.4s ease;
+    pointer-events: none;
 }
+
 
 .card:hover::before {
     opacity: 1;
@@ -69,9 +79,9 @@ body {
 .card h2 {
     margin-bottom: 20px;
     font-size: 1.4rem;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(0,0,0,0.15);
     padding-bottom: 10px;
-    color: #fff;
+    color: #222;
 }
 
 /* ===== CONTACT INFO ===== */
@@ -83,7 +93,7 @@ body {
 .contact-info li {
     margin-bottom: 12px;
     font-size: 1rem;
-    color: #eee;
+    color: #333;
 }
 
 /* ===== FORM ===== */
@@ -91,7 +101,7 @@ body {
     display: block;
     margin-top: 15px;
     font-weight: 600;
-    color: #fff;
+    color: #222;
 }
 
 .contact-form input,
@@ -100,9 +110,9 @@ body {
     padding: 10px;
     margin-top: 5px;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
+    border: 1px solid rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.6); /* Light, clean input */
+    color: #222;
     font-size: 1rem;
 }
 
@@ -132,15 +142,13 @@ body {
 /* Success message */
 .success-message {
     margin-top: 15px;
-    color: #90ee90;
+    color: #2e8b57;
     font-weight: 600;
     text-align: center;
 }
 
-/* ===== ERROR MESSAGE (ADDED) ===== */
+/* ===== ERROR MESSAGE ===== */
 .error {
-    color: #ff6b6b;
+    color: #ff4d4d;
     font-size: 0.9rem;
-    margin-top: 5px;
-    margin-bottom: -5px;
 }

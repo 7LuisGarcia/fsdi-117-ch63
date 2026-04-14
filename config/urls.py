@@ -23,11 +23,8 @@ from pages import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.about_me_view, name='home'),
     path('', include('pages.urls')),
     path('', include('projects.urls')),
-     path('about_me/', views.about_me_view, name='about_me'),
-    path('experience/', views.experience_view, name='experience'), 
-    path('contact/', views.contact_view, name='contact'),
+   
 ]    
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
